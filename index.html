@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e5e9ed; 
+        }
+        header {
+            background-color: rgb(11, 11, 233); 
+            color: white;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            padding: 1px 0;
+            text-align: center;
+            border-bottom-left-radius: 0.5rem;  
+            border-bottom-right-radius: 0.5rem; 
+        }
+        header h1 {
+            font-size: 2rem; 
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+        main {
+            margin: 2rem auto; 
+            padding-left: 5rem;  
+            padding-right: 5rem; 
+        }
+        section {
+            background-color: white;
+            border-radius: 0.5rem; 
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+            padding: 3rem;      
+            margin-bottom: 1.5rem; 
+        }
+        section h2 {
+            color: black;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem; 
+        }
+        .about-me-content {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;          
+        }
+        .about-me-image {
+            flex: 0 0 33.333%;    
+            min-width: 200px;      
+        }
+        .about-me-image img {
+            border-radius: 50%;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+        .about-me-text {
+            flex: 0 0 66.666%;    
+            color: rgb(71, 82, 94);
+            line-height: 1.75; 
+            
+            
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+            gap: 1.5rem;          
+        }
+        .project-card {
+            background-color: #f7fafc;  
+            border-radius: 0.5rem;     
+            padding: 1.5rem;          
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);  
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .project-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-card h3 {
+            color: #2563eb;
+            font-size: 1.25rem;    /* h5 size */
+            margin-bottom: 0.5rem;  /* 8px */
+        }
+        .project-card p {
+            color: rgb(71, 82, 94);
+            margin-bottom: 1rem;    /* 16px */
+        }
+        .project-card a{
+            text-decoration: none;
+            color: #335e8b;
+        }
+        .project-card a:hover{
+            color: #007bff;
+        }
+
+        .contact-me-content {
+            text-align: center;
+            color: rgb(71, 82, 94);
+            margin-bottom: 1.5rem;  /* 24px */
+        }
+        .contact-me-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;            /* 16px */
+        }
+        .contact-me-links a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid #007bff;
+            border-radius: 0.375rem; /* rounded-md */
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+        .contact-me-links a:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        footer {
+            background-color: black;}
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 992px) {  /* md breakpoint in Bootstrap is 992px */
+            .about-me-content{
+              flex-wrap: wrap;
+            }
+            .about-me-image {
+              flex: 0 0 100%;
+              text-align: center;
+              margin-bottom: 1rem;
+            }
+            .about-me-text {
+                flex: 0 0 100%;
+            }
+            .main {
+                max-width: 768px; /* Medium devices */
+            }
+        }
+        @media (max-width: 768px) {
+           .main{
+             max-width: 540px; /* Small devices */
+           }
+           header h1{
+             font-size: 2.25rem;
+           }
+           .about-me-text{
+             font-size: 1rem;
+           }
+        }
+        @media (max-width: 576px) {
+            .contact-me-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            .contact-me-links a{
+              width: 100%;
+              text-align: center;
+            }
+            main {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Veena Lohana</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <div class="about-me-content">
+                <div class="about-me-image">
+                    <img src="pic.png" alt="Your Photo">
+                </div>
+                <div class="about-me-text">
+                    <p>
+                          "I am a budding front-end developer with a passion for creating beautiful and user-friendly websites. I have experience with HTML, CSS, and JavaScript, and I'm always eager to learn new technologies."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Project 1: Calculator</h3>
+                    <p>I developed a dynamic and user-friendly Calculator using JavaScript, HTML, & CSS</p>
+                    <a href="https://veenalohana.github.io/hello/" target="_blank">Calculator</a>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2: E-commerce Site</h3>
+                    <p>Built a simple e-commerce website with product listings and a shopping cart.</p>
+                     <a href="https://veenalohana.github.io/Myntra-/" target="_blank" >Myntra-Clone</a>
+                    
+                </div>
+                <div class="project-card">
+                    <h3>Project 3: To-Do APP</h3>
+                    <p>This App help a perform a task, Adding,Deleting & Editing a tasks</p>
+                    <a href="https://veenalohana.github.io/To-do-App/" target="_blank" >To-Do App</a>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact Me</h2>
+            <p class="contact-me-content">
+                Feel free to reach out to me via email or connect with me on social media.
+            </p>
+            <div class="contact-me-links">
+                <a href="mailto:lohanaveena38@gmail.com">Email</a>
+                <a href="https://www.linkedin.com/in/veena-lohana-640a622b1">LinkedIn</a>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>
